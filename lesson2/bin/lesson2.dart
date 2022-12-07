@@ -3,10 +3,13 @@ void main() {
 //задание
 //1
 List someInts= [1, 7, 12, 3, 56, 2, 87, 34, 54];
-print (someInts.first);
-print (someInts[5]);
-print (someInts.last);
-
+// print (someInts.first);
+// print (someInts[4]);
+// print (someInts.last);
+ print ("Первый элемент- ${someInts.first}, посл- ${someInts.last}");
+//  //List <int> listOne = [1, 7, 12, 3, 56, 2, 87];
+//  int index = Random().nextInt(listOne.length); --интовое значение  import "dart:math"
+ 
 //2
 List a =[3, 12, 43, 1, 25, 6, 5, 7];
 List b =[55, 11, 23, 56, 78, 1, 9];
@@ -15,7 +18,7 @@ print (c);
 
 //3
 List f= ['a','d','F','l','u','t','t','e','R','y','3','b','h','j'];
-print (f.getRange(2,9));
+print (f.getRange(2,9)); //отрезок
 
 
 //4
@@ -41,7 +44,7 @@ print (sixth.contains(myDart.toLowerCase()));
 //7
 List seventh = ["I", "Started", "Learn", "Flutter", "Since", "April"];
 String  myFlutter = "";
-myFlutter=(seventh.join("*").toString());
+myFlutter=seventh.join("*");
 print(myFlutter);
 
 //8
