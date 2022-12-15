@@ -91,13 +91,9 @@ taskThree(s, n) {
 
 //8: Составьте программу, которая вычисляет сумму квадратов чисел от 1 до введенного вами целого числа N
 task8(nnn) {
-  List<int> count = [];
-  double counter = 0;
+  int summ = 0;
   for (int i = 1; i <= nnn; i++) {
-    count.add(i);
+    summ += i * i;
   }
-  for (int i = 1; i < count.length; i++) {
-    counter += (count[i] * i) + nnn;
-  }
-  return counter;
+  return summ;
 }
