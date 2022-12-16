@@ -119,11 +119,19 @@ void main() {
   String endS = stdin.readLineSync()!;
   int end = int.parse(endS);
   int i = start;
-  while (i <= end) {
+  if (i < end) {
+    while (i <= end) {
+      if (i % 2 != 0) {
+        summary += i;
+      }
+      i++;
+    }
+  }
+  while (i >= end) {
     if (i % 2 != 0) {
       summary += i;
     }
-    i++;
+    i--;
   }
   print("сумма нечетных чисел с $start до $end = $summary");
 }
