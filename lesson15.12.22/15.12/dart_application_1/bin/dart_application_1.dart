@@ -83,32 +83,32 @@ void main() {
   }
 
 //7
-  print('7 задание: Введите логин');
-  String mm = stdin.readLineSync()!;
-  print('7 задание: Введите пароль');
-  String pp = stdin.readLineSync()!;
+  print('7 задание: Введите пароль для регистрации');
+  String passWord = stdin.readLineSync()!;
+  print('Введите пароль');
+  String passWordCheck = stdin.readLineSync()!;
   do {
-    print('7 задание: Введите пароль');
-    String pp = stdin.readLineSync()!;
-  } while (pp == "123456");
+    print('введите еще раз пароль');
+    passWordCheck = stdin.readLineSync()!;
+  } while (passWord != passWordCheck);
+
+//7
+  // TaskOne();
 
 //8
-  // int total = 0;
-  // int summ = 0;
-  // print('8 задание: введите числа (0-выход и подсчет результата)');
-  // String eight = stdin.readLineSync()!;
-  // int ee = int.parse(eight);
-  // do {
-  //   print('8 задание: введите числа (0-выход и подсчет результата)');
-  //   String eight = stdin.readLineSync()!;
-  //   int ee = int.parse(eight);
-  //   if (ee != 0) {
-  //     print("число ${total++} = $ee");
-  //     total++;
-  //     summ += ee;
-  //     print("arif= ${summ / ee}");
-  //   }
-  // } while (ee == 0);   (не поняла)
+  print('8 задание: введите числа (0-выход и подсчет результата)');
+  int num = int.parse(stdin.readLineSync()!);
+  int counter = 0;
+  int summ = 0;
+  do {
+    print('введите еще 1 число (0-выход и подсчет результата)');
+    counter++;
+    summ += num;
+    num = int.parse(stdin.readLineSync()!);
+  } while (num != 0);
+  print('$counter -введенные числа');
+  print('$summ -сумма');
+  print('${summ / counter} -среднее ариф');
 
   //9
   int summary = 0;
@@ -127,3 +127,23 @@ void main() {
   }
   print("сумма нечетных чисел с $start до $end = $summary");
 }
+
+//7 с функцией 
+// void TaskOne() {
+//   print('7 задание: Введите пароль для регистрации');
+//   String passWord = stdin.readLineSync()!;
+//   print('Введите пароль');
+//   String passWordCheck = stdin.readLineSync()!;
+
+//   void checkPassWord(String passWord, String passWordCheck) {
+//     if (passWord != passWordCheck) {
+//       print('неверный пароль');
+//       passWordCheck = stdin.readLineSync()!;
+//       checkPassWord(passWord, passWordCheck);
+//     } else {
+//       print('верно');
+//     }
+//   }
+
+//   checkPassWord(passWord, passWordCheck);
+// }
