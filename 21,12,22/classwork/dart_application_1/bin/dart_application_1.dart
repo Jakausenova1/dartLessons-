@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   taskone();
   taskTwo();
@@ -71,7 +73,17 @@ class miniBus extends Vehicle {
 }
 
 //2
-taskTwo() {}
+taskTwo() {
+  List<Person> people = [];
+  print('enter teachings name');
+  people.add(Teacher(name: stdin.readLineSync()!));
+  print('enter names of 2 students');
+  people.add(Teacher(name: stdin.readLineSync()!));
+  people.add(Teacher(name: stdin.readLineSync()!));
+  for (int i = 0; i < people.length; i++) {
+    print(people[i].name);
+  }
+}
 
 class Person {
   String name;
